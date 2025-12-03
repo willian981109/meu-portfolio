@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willian Santos — Desenvolvedor em Formação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO FIXO -->
+    <header>
+        <h1>Willian Santos</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+
+    <!-- SEÇÃO HOME -->
+    <section id="home" class="secao reveal">
+        <h2>Bem-vindo!</h2>
+        <p>
+            Este é meu primeiro site pessoal criado com HTML, CSS e muita prática!  
+            Estou iniciando minha jornada no desenvolvimento web e construindo meu portfólio aos poucos.
+        </p>
+    </section>
+
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" class="secao reveal">
+        <h2>Sobre mim</h2>
+        <p>
+            Meu nome é Willian, estudante de ADS e apaixonado por tecnologia.  
+            Comecei meus primeiros projetos com HTML e CSS, explorando os fundamentos e evoluindo todos os dias.
+        </p>
+    </section>
+
+    <!-- SEÇÃO PROJETOS -->
+    <section id="projetos" class="secao reveal">
+        <h2>Projetos</h2>
+
+        <ul>
+            <li>Meu Primeiro Projeto HTML</li>
+            <li>Exercícios de Listas e Tabelas</li>
+            <li>Aprendendo Semântica</li>
+        </ul>
+    </section>
+
+    <!-- SEÇÃO CONTATO -->
+    <section id="contato" class="secao reveal">
+        <h2>Contato</h2>
+
+        <p>Email: 
+            <strong>willian981109@gmail.com</strong>
+        </p>
+
+        <div class="contato-botoes">
+            <a class="btn-contato" href="https://www.linkedin.com/in/willian-santos-22aa48230/" target="_blank">
+                🔗 LinkedIn
+            </a>
+
+            <a class="btn-contato" href="https://github.com/willian981109" target="_blank">
+                🐙 GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Willian Santos — Todos os direitos reservados
+    </footer>
+
+    <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+<div id="tsparticles"></div>
+
+<script>
+tsParticles.load("tsparticles", {
+  fullScreen: {
+    enable: true,
+    zIndex: -1
+  },
+
+  background: {
+    color: "transparent"
+  },
+
+  particles: {
+    number: {
+      value: 45,
+      density: { enable: true, area: 900 }
+    },
+
+    color: {
+      value: ["#7b2cff", "#00aaff", "#ffffff"]
+    },
+
+    shape: { type: "circle" },
+
+    size: {
+      value: { min: 1, max: 3 }
+    },
+
+    opacity: {
+      value: 1,
+      animation: {
+        enable: true,
+        speed: 1.1,        // ⚡ MAIS RÁPIDO
+        minimumValue: 0.2, // ⚡ MAIS QUEDA DE OPACIDADE
+        sync: false
+      }
+    },
+
+    move: {
+      enable: true,
+      speed: 0.35,
+      direction: "none",
+      outModes: { default: "out" }
+    },
+
+    links: { enable: false }
+  },
+
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: "repulse" },
+      onClick: { enable: false }
+    },
+
+    modes: {
+      repulse: {
+        distance: 130,
+        duration: 0.4
+      }
+    }
+  }
+});
+</script>
+
+
+
+</body>
+</html>
+
+
+

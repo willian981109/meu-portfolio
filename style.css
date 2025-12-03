@@ -1,0 +1,274 @@
+/* ============================================================
+   RESET GLOBAL
+============================================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0a0f1a;
+    color: #eee;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   HEADER FUTURISTA AZUL + ROXO NEON
+============================================================ */
+header {
+    width: 100%;
+    padding: 28px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: transparent;      /* <---- TUDO AQUI */
+    backdrop-filter: blur(4px);   /* Deixa sofisticado */
+}
+
+nav a {
+    margin-left: 30px;   /* Afastamento entre os links */
+    text-decoration: none;
+}
+
+
+
+@keyframes headerGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* ===== Nome do Header ===== */
+header h1 {
+    font-size: 32px;
+    font-weight: 900;
+
+    background: linear-gradient(90deg, #00aaff, #7b2cff, #ff4fe0, #00aaff);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: nameShine 4s linear infinite;
+    letter-spacing: 1.2px;
+}
+
+@keyframes nameShine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* ============================================================
+   MENU NEON
+============================================================ */
+nav a {
+    font-size: 18px;
+    margin: 0 18px;
+    color: #e7e7e7;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff4fe0;
+    text-shadow: 0 0 12px #ff4fe0;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    bottom: -3px;
+    left: 0;
+    background: #7b2cff;
+    transition: 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ============================================================
+   TÍTULOS DAS SEÇÕES — GRADIENTE NEON
+============================================================ */
+.secao h2 {
+    font-size: 30px;
+    font-weight: 900;
+
+    background: linear-gradient(90deg, #00aaff, #7b2cff, #ff4fe0, #00aaff);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: h2Shine 5s linear infinite;
+    letter-spacing: 1px;
+    padding-bottom: 8px;
+
+    position: relative;
+}
+
+@keyframes h2Shine {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+.secao h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 90px;
+    height: 3px;
+    background: linear-gradient(90deg, #00aaff, #7b2cff, #ff4fe0, #00aaff);
+    background-size: 300%;
+    animation: underlineH2 4s ease infinite;
+    border-radius: 3px;
+}
+
+@keyframes underlineH2 {
+    0% { background-position: 0%; }
+    50% { background-position: 100%; }
+    100% { background-position: 0%; }
+}
+
+/* ============================================================
+   SEÇÕES — GALÁXIA FUTURISTA + BORDA NEON + PARTÍCULAS
+============================================================ */
+.secao {
+    max-width: 900px;
+    margin: 130px auto 40px auto;
+
+    scroll-margin-top: 150px;
+    position: relative;
+
+    padding: 60px 20px;
+    border-radius: 14px;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #0c0f1a, #1a0033, #0a2a43);
+    background-size: 300% 300%;
+    animation: bgMove 10s ease infinite;
+
+    border: 2px solid transparent;
+    background-clip: padding-box, border-box;
+    transition: 0.45s ease;
+}
+
+/* Fundo animado */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Bordas animadas */
+.secao::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 16px;
+    z-index: -2;
+
+    background: linear-gradient(130deg, #00aaff, #7b2cff, #ff4fe0, #00aaff);
+    background-size: 400% 400%;
+    animation: borderMove 6s linear infinite;
+}
+
+@keyframes borderMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Partículas neon */
+.secao::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 79, 224, 0.18) 0, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(123, 44, 255, 0.18) 0, transparent 50%),
+        radial-gradient(circle at 40% 90%, rgba(0, 170, 255, 0.18) 0, transparent 50%),
+        radial-gradient(circle at 65% 30%, rgba(255, 79, 224, 0.18) 0, transparent 50%);
+
+    animation: particlesMove 8s linear infinite alternate;
+    opacity: 0.45;
+    z-index: -1;
+}
+
+@keyframes particlesMove {
+    0% { transform: translate(0px, 0px); }
+    50% { transform: translate(20px, -15px); }
+    100% { transform: translate(-10px, 20px); }
+}
+
+/* Hover */
+.secao:hover {
+    transform: scale(1.03) translateY(-6px);
+    box-shadow: 0 0 35px rgba(123, 44, 255, 0.55);
+}
+
+/* ============================================================
+   BOTÕES DE CONTATO
+============================================================ */
+.contato-botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+.btn-contato {
+    padding: 10px 18px;
+    background: linear-gradient(90deg, #00aaff, #7b2cff);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #7b2cff;
+    transition: 0.3s ease;
+}
+
+.btn-contato:hover {
+    background: linear-gradient(90deg, #ff4fe0, #7b2cff);
+    box-shadow: 0 0 15px #7b2cff;
+    transform: translateY(-4px);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    color: #bbb;
+}
+
+#tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
