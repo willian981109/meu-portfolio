@@ -272,3 +272,122 @@ footer {
     z-index: -1;
 }
 
+/* ============================================================
+   RESPONSIVIDADE — MOBILE, TABLET E NOTEBOOK
+============================================================ */
+
+/* Telas até 900px */
+@media (max-width: 900px) {
+
+    header {
+        padding: 20px 25px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .secao {
+        max-width: 90%;
+        padding: 40px 20px;
+        margin: 110px auto 30px auto;
+    }
+
+    .secao h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .btn-contato {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+/* Telas até 650px — CELULAR */
+@media (max-width: 650px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 10px;
+        backdrop-filter: blur(6px);
+    }
+
+    nav {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .secao {
+        margin-top: 130px;
+        padding: 35px 15px;
+        max-width: 95%;
+    }
+
+    .secao h2 {
+        font-size: 22px;
+    }
+
+    .btn-contato {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .contato-botoes {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Telas até 450px — CELULAR PEQUENO */
+@media (max-width: 450px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 13.5px;
+    }
+
+    .secao {
+        padding: 30px 14px;
+    }
+
+    .secao h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+}
+
+
